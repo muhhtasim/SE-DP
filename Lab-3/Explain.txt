@@ -1,0 +1,71 @@
+ Explain...
+
+ This  program is actually applying Encapsulation and inheritance..
+ Employee is the parent class with private feild and getters.,...
+ Manager and intern inherit(extendes kora hoise) from Employee..
+ Both subclass override getDailyAccessHours() ..But Manager subclass also override descrive()..
+ Employee Id is automatically generated using a static counter,which is in Employee class.
+ Blank names are handled using constructor validation.
+ Main class creates objects and displays their information...
+
+
+
+
+
+Detailss....
+
+1. Employee Class
+Employee is the parent class.
+It has three private variables:
+employeeId
+name
+dailyAccessHours
+
+employeeId is automatically generated using a static counter.
+Every time a new Employee object is created, the counter increases.
+The constructor takes only the name.
+If the name is empty or blank, it prints an error and sets the name
+to "Unknown Employee".
+
+Getters are used to access the private variables.
+The describe() method prints the employee information.
+
+
+2. Manager Class
+Manager extends Employee, so it inherits all Employee properties
+and methods.
+Manager has an extra variable called teamSize.
+
+It overrides getDailyAccessHours().
+The formula is:
+
+8 + (teamSize / 5)
+
+For example, if teamSize is 12:
+8 + (12 / 5) = 8 + 2 = 10 hours.
+
+It also overrides describe() to show the team size.
+
+
+3. Intern Class
+
+Intern also extends Employee.
+It has an extra variable called month.
+It overrides getDailyAccessHours().
+
+Month 1 to 3 = 4 hours
+Month 4 to 6 = 6 hours
+
+So, the access hours depend on the intern's month.
+
+
+4. Main Class
+Main creates:
+- One Employee
+- One Manager
+- One Intern
+- One Employee with a blank name
+
+Then describe() and getDailyAccessHours() are called
+for each object.
+
